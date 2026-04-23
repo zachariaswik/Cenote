@@ -9,6 +9,8 @@ Use the prompts in this order:
 5. [prompt-4-conversation-memory.md](/Users/erikwik/Life/Cenote/prompt-4-conversation-memory.md)
 6. [prompt-5-frontends-and-cloud.md](/Users/erikwik/Life/Cenote/prompt-5-frontends-and-cloud.md)
 7. [prompt-6-observability-and-delivery.md](/Users/erikwik/Life/Cenote/prompt-6-observability-and-delivery.md)
+8. [prompt-opus-4-7-brand-implementation.md](/Users/erikwik/Life/Cenote/prompt-opus-4-7-brand-implementation.md)
+9. [prompt-opus-4-7-ui-ux-implementation.md](/Users/erikwik/Life/Cenote/prompt-opus-4-7-ui-ux-implementation.md)
 
 
 The sequence is intentionally stricter than the original 4-step version:
@@ -16,3 +18,5 @@ The sequence is intentionally stricter than the original 4-step version:
 - Prompts 1-4 build the local daemon, indexing, ingestion, and memory system.
 - Prompt 5 wires real frontends and cloud reasoning onto the local core.
 - Prompt 6 hardens the project for actual use and handoff.
+- Brand prompt locks in the visual identity (type, color, motif).
+- UI/UX prompt implements the full product surface — architecture, screens, components, states, flows, copy, motion.

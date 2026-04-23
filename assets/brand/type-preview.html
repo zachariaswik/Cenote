@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cenote — Typography</title>
+  <link rel="stylesheet" href="./typography.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 4rem 2rem 6rem;
+      background: #faf8f4;
+      color: #1a1d1f;
+    }
+    main { max-width: 780px; margin: 0 auto; }
+    hr {
+      border: none;
+      border-top: 1px solid #d9d2c4;
+      margin: 3rem 0;
+    }
+    .stack-label {
+      font-family: var(--cenote-font-sans);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: var(--cenote-tracking-caps);
+      color: #8a8577;
+      margin-bottom: 0.5rem;
+    }
+    .weight-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem 2.5rem;
+      margin: 1rem 0 0;
+    }
+    .weight-row span {
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="cenote-eyebrow">Cenote Brand · Typography</p>
+    <h1>Depth. Clarity. Sophistication.</h1>
+    <p class="cenote-lead">
+      A local-first hybrid life OS — where organic heritage meets surgical
+      modern precision.
+    </p>
+
+    <hr>
+
+    <p class="stack-label">Display serif — EB Garamond</p>
+    <p class="cenote-display">Cenote</p>
+
+    <hr>
+
+    <p class="stack-label">Headline serif — EB Garamond, SemiBold</p>
+    <h1>The vault is yours.</h1>
+    <h2>Your words, kept close.</h2>
+    <h3>A quiet engine for thought.</h3>
+
+    <hr>
+
+    <p class="stack-label">Sub-headline sans — Manrope, SemiBold</p>
+    <h4>Precision for the interface.</h4>
+    <h5>Clarity in every pixel.</h5>
+    <h6>Small type, fully legible.</h6>
+
+    <hr>
+
+    <p class="stack-label">Body — Manrope Regular</p>
+    <p>
+      Cenote is built on the idea that personal knowledge should live locally,
+      processed by models you trust, and surfaced through the conversations
+      you're already having. The cloud reasons over summaries; the vault
+      stays on your machine. Typography follows the same ethos — editorial
+      weight where it matters, functional clarity where you work.
+    </p>
+
+    <p class="stack-label">Editorial italic lead — EB Garamond Italic</p>
+    <p class="cenote-lead">
+      "The sinkhole is a library with a ceiling made of sky."
+    </p>
+
+    <hr>
+
+    <p class="stack-label">EB Garamond — weights</p>
+    <div class="weight-row" style="font-family: var(--cenote-font-serif);">
+      <span style="font-weight: 400;">Regular 400</span>
+      <span style="font-weight: 500;">Medium 500</span>
+      <span style="font-weight: 600;">SemiBold 600</span>
+      <span style="font-weight: 700;">Bold 700</span>
+      <span style="font-weight: 800;">ExtraBold 800</span>
+      <span style="font-weight: 400; font-style: italic;">Italic 400</span>
+      <span style="font-weight: 600; font-style: italic;">SemiBold Italic 600</span>
+    </div>
+
+    <p class="stack-label" style="margin-top: 2.5rem;">Manrope — weights</p>
+    <div class="weight-row" style="font-family: var(--cenote-font-sans);">
+      <span style="font-weight: 200;">ExtraLight 200</span>
+      <span style="font-weight: 300;">Light 300</span>
+      <span style="font-weight: 400;">Regular 400</span>
+      <span style="font-weight: 500;">Medium 500</span>
+      <span style="font-weight: 600;">SemiBold 600</span>
+      <span style="font-weight: 700;">Bold 700</span>
+      <span style="font-weight: 800;">ExtraBold 800</span>
+    </div>
+
+    <hr>
+
+    <p class="cenote-eyebrow">Built for how you work</p>
+    <h3>A system that reads the room.</h3>
+    <p>
+      Headline in the serif. Running copy in the sans. Eyebrows and captions
+      in tight, confident caps. The pairing does the heavy lifting — you
+      write the substance.
+    </p>
+    <p><small>Typography spec · Cenote Brand v0.2</small></p>
+  </main>
+</body>
+</html>

@@ -8,19 +8,35 @@ Cenote is a "Modern Heritage" brand. It juxtaposes the organic, deep-rooted eleg
 - **Atmosphere**: Professional yet approachable, blending high-end editorial aesthetics with tech-forward usability.
 
 ## 2. Typography (The Dual-Core System)
-The brand utilizes a strategic pairing of a serif and a sans-serif typeface to bridge the gap between tradition and innovation.
+The brand utilizes a strategic pairing of a serif and a sans-serif typeface to bridge the gap between tradition and innovation. Both typefaces are SIL Open Font Licensed and served from the Google Fonts CDN (`fonts.googleapis.com`), so they render correctly in any web view Claude or a browser produces — no local file upload required.
 
-### Primary Serif: Cormorant Garamond
+### Primary Serif: EB Garamond
 - **Role**: Headlines, editorial copy, and high-impact branding.
-- **Characteristics**: An elegant, flowing serif with high contrast. It conveys luxury, history, and organic beauty.
-- **Weights Used**: Light, Regular, Medium, SemiBold, Bold (including Italics).
+- **Characteristics**: A direct Garamond derivative with high contrast, generous counters, and classic humanist proportions. Conveys luxury, history, and organic beauty.
+- **Weights Used**: Regular (400), Medium (500), SemiBold (600), Bold (700), ExtraBold (800) — all with italics.
+- **Source**: https://fonts.google.com/specimen/EB+Garamond
+- **Fallback stack**: `'EB Garamond', Georgia, 'Times New Roman', serif`
 - **Vibe**: Classic, sophisticated, "Old World" intelligence.
 
-### Primary Sans-Serif: Sora
+### Primary Sans-Serif: Manrope
 - **Role**: Interface elements, body text, and functional signage.
-- **Characteristics**: A geometric sans-serif with an industrial yet friendly feel. It ensures legibility and provides a modern "tech" anchor to the brand.
-- **Weights Used**: Thin to ExtraBold (comprehensive range for UI/UX).
+- **Characteristics**: A geometric sans-serif with gently softened terminals — industrial precision with a friendly, modern warmth. Excellent legibility at UI sizes.
+- **Weights Used**: ExtraLight (200) through ExtraBold (800) — comprehensive range for UI/UX.
+- **Source**: https://fonts.google.com/specimen/Manrope
+- **Fallback stack**: `'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif`
 - **Vibe**: Precise, clean, modern, reliable.
+
+### Loading in HTML
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+```
+
+### Loading in CSS
+```css
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Manrope:wght@200..800&display=swap');
+```
 
 ## 3. Logo System
 The logo is designed for extreme versatility across digital and physical mediums.

@@ -1,0 +1,146 @@
+/* Cenote Brand Typography
+ * ------------------------
+ * Dual-core type system: serif headlines + geometric sans UI.
+ * Loads from Google Fonts CDN with system-font fallbacks so copy
+ * remains on-brand even if the network can't reach the CDN.
+ *
+ * Usage:  <link rel="stylesheet" href="/assets/brand/typography.css">
+ *         or  @import url('/assets/brand/typography.css');
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Manrope:wght@200..800&display=swap');
+
+:root {
+  /* Families */
+  --cenote-font-serif:
+    'EB Garamond', Georgia, 'Times New Roman', 'Iowan Old Style', serif;
+  --cenote-font-sans:
+    'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui,
+    'Helvetica Neue', Arial, sans-serif;
+
+  /* Weight tokens — mirror the brand spec */
+  --cenote-weight-thin:       200;
+  --cenote-weight-light:      300;
+  --cenote-weight-regular:    400;
+  --cenote-weight-medium:     500;
+  --cenote-weight-semibold:   600;
+  --cenote-weight-bold:       700;
+  --cenote-weight-extrabold:  800;
+
+  /* Type scale — modular, 1.25 ratio, anchored at 1rem body */
+  --cenote-size-caption: 0.75rem;   /* 12px */
+  --cenote-size-small:   0.875rem;  /* 14px */
+  --cenote-size-body:    1rem;      /* 16px */
+  --cenote-size-lead:    1.125rem;  /* 18px */
+  --cenote-size-h6:      1.25rem;   /* 20px */
+  --cenote-size-h5:      1.5rem;    /* 24px */
+  --cenote-size-h4:      1.875rem;  /* 30px */
+  --cenote-size-h3:      2.25rem;   /* 36px */
+  --cenote-size-h2:      3rem;      /* 48px */
+  --cenote-size-h1:      3.75rem;   /* 60px */
+  --cenote-size-display: 5rem;      /* 80px */
+
+  /* Leading */
+  --cenote-leading-tight:   1.1;
+  --cenote-leading-snug:    1.25;
+  --cenote-leading-normal:  1.5;
+  --cenote-leading-relaxed: 1.65;
+
+  /* Tracking */
+  --cenote-tracking-tight:  -0.02em;
+  --cenote-tracking-normal: 0;
+  --cenote-tracking-wide:   0.04em;
+  --cenote-tracking-caps:   0.08em;
+}
+
+/* Sensible defaults — sans for UI, serif reserved for editorial elements */
+html, body {
+  font-family: var(--cenote-font-sans);
+  font-weight: var(--cenote-weight-regular);
+  font-size: var(--cenote-size-body);
+  line-height: var(--cenote-leading-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headlines — editorial serif, tight leading, slight negative tracking */
+h1, h2, h3,
+.cenote-headline {
+  font-family: var(--cenote-font-serif);
+  font-weight: var(--cenote-weight-semibold);
+  line-height: var(--cenote-leading-tight);
+  letter-spacing: var(--cenote-tracking-tight);
+}
+
+h1 { font-size: var(--cenote-size-h1); }
+h2 { font-size: var(--cenote-size-h2); }
+h3 { font-size: var(--cenote-size-h3); }
+
+/* Sub-headlines — stay in the sans for hierarchy contrast */
+h4, h5, h6,
+.cenote-subhead {
+  font-family: var(--cenote-font-sans);
+  font-weight: var(--cenote-weight-semibold);
+  line-height: var(--cenote-leading-snug);
+  letter-spacing: var(--cenote-tracking-normal);
+}
+
+h4 { font-size: var(--cenote-size-h4); }
+h5 { font-size: var(--cenote-size-h5); }
+h6 { font-size: var(--cenote-size-h6); }
+
+/* Editorial display — largest "hero" type, use sparingly */
+.cenote-display {
+  font-family: var(--cenote-font-serif);
+  font-weight: var(--cenote-weight-regular);
+  font-size: var(--cenote-size-display);
+  line-height: var(--cenote-leading-tight);
+  letter-spacing: var(--cenote-tracking-tight);
+}
+
+/* Editorial italic lead */
+.cenote-lead {
+  font-family: var(--cenote-font-serif);
+  font-style: italic;
+  font-weight: var(--cenote-weight-regular);
+  font-size: var(--cenote-size-lead);
+  line-height: var(--cenote-leading-relaxed);
+}
+
+/* Body copy — default sans */
+p, .cenote-body {
+  font-family: var(--cenote-font-sans);
+  font-weight: var(--cenote-weight-regular);
+  line-height: var(--cenote-leading-relaxed);
+}
+
+/* Small print, captions */
+small, .cenote-caption {
+  font-family: var(--cenote-font-sans);
+  font-size: var(--cenote-size-caption);
+  font-weight: var(--cenote-weight-medium);
+  letter-spacing: var(--cenote-tracking-wide);
+}
+
+/* Eyebrow / overline — all-caps label */
+.cenote-eyebrow {
+  font-family: var(--cenote-font-sans);
+  font-size: var(--cenote-size-caption);
+  font-weight: var(--cenote-weight-bold);
+  letter-spacing: var(--cenote-tracking-caps);
+  text-transform: uppercase;
+}
+
+/* UI buttons */
+button, .cenote-button {
+  font-family: var(--cenote-font-sans);
+  font-weight: var(--cenote-weight-semibold);
+  letter-spacing: var(--cenote-tracking-normal);
+}
+
+/* Inline code — sans stays; mono not specified in the brand */
+code, kbd, samp {
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, 'Roboto Mono', monospace;
+  font-size: 0.95em;
+}
