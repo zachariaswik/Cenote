@@ -1,0 +1,9 @@
+/target
+/data
+/.env
+/fixtures/vault/.cenote
+**/*.db
+**/*.db-journal
+**/*.db-wal
+**/*.db-shm
+.DS_Store

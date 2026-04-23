@@ -1,0 +1,66 @@
+[package]
+name = "cenote"
+version = "0.1.0"
+edition = "2021"
+description = "Local-first hybrid life OS daemon (Cenote)"
+license = "MIT OR Apache-2.0"
+
+[[bin]]
+name = "cenote"
+path = "src/main.rs"
+
+[lib]
+name = "cenote"
+path = "src/lib.rs"
+
+[dependencies]
+anyhow = "1"
+thiserror = "1"
+tokio = { version = "1", features = ["full"] }
+futures = "0.3"
+async-trait = "0.1"
+
+# CLI
+clap = { version = "4", features = ["derive", "env"] }
+
+# Config
+dotenvy = "0.15"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# HTTP (Ollama client, web chat surface, messaging webhooks)
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "gzip"] }
+axum = { version = "0.7", features = ["macros"] }
+tower = "0.5"
+tower-http = { version = "0.6", features = ["trace", "cors"] }
+hyper = "1"
+
+# Database (rusqlite for local SQLite; libsql is wire-compatible but rusqlite keeps dev simple)
+rusqlite = { version = "0.31", features = ["bundled"] }
+r2d2 = "0.8"
+r2d2_sqlite = "0.24"
+
+# Logging / tracing
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# File watching
+notify = "6"
+notify-debouncer-full = "0.3"
+
+# Utilities
+walkdir = "2"
+blake3 = "1"
+regex = "1"
+once_cell = "1"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+percent-encoding = "2"
+
+# Markdown + text extraction
+pulldown-cmark = "0.11"
+lopdf = "0.33"
+
+[dev-dependencies]
+tempfile = "3"
+httpmock = "0.7"

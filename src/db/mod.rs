@@ -59,6 +59,7 @@ impl Database {
     }
 
     pub fn run_migrations(&self) -> Result<()> {
-        migrations::run(&mut self.conn()?)
+        let mut conn = self.conn()?;
+        migrations::run(&mut conn)
     }
 }
